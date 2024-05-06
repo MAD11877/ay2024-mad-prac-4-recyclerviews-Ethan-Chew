@@ -3,34 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="208dp"
-        android:layout_height="103dp"
-        android:layout_weight="1"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/nameLabel"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="208dp"
+            android:layout_height="103dp"
             android:layout_weight="1"
-            android:text="Name"
-            android:textSize="25sp" />
+            app:srcCompat="@android:drawable/sym_def_app_icon" />
 
-        <TextView
-            android:id="@+id/descriptionLabel"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Description" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/descriptionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Description" />
+        </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/largeImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
 </LinearLayout>
